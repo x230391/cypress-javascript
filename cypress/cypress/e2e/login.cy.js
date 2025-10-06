@@ -80,10 +80,10 @@ describe('Incluindo produtos no carrinho', () => {
     cy.url().should('eq', 'https://www.saucedemo.com/cart.html');
     cy.get('.cart_item').should('have.length', 2);
     cy.get('.shopping_cart_badge')
-  .invoke('text')
-  .then((t) => {
-    const n = Number(t.trim());
-    expect(n).to.equal(2);
+    .invoke('text')
+    .then((t) => {
+        const n = Number(t.trim());
+        expect(n).to.equal(2);
   });
 
 })
